@@ -20,6 +20,38 @@ header {
   align-items: center;
 }
 
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: hsla(0deg, 0%, 0%, 0.75);
+}
+
+.nav-links-container {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 50%;
+  height: 100vh;
+}
+
+.close-icon {
+  padding: 1rem;
+}
+
+.menu-list {
+  padding: 1rem;
+}
+.menu-list li {
+  margin-bottom: 0.9rem;
+}
+.menu-list li a {
+  color: hsl(220deg, 13%, 13%);
+  font-weight: 700;
+}
+
 .header-cart {
   padding-right: 0.75rem;
 }

@@ -13,6 +13,10 @@ header {
   align-items: center;
 }
 
+.mobile-menu {
+  // display: none;
+}
+
 .logo {
   padding-left: .8rem;
 }
@@ -21,19 +25,40 @@ header {
 .header-section-2 {
   display: flex;
   align-items: center;
-  // padding: 1rem;
+}
 
-  // img {
-  //   padding: .5rem;
-  // }
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: head.$black;
+}
+
+.nav-links-container {
+  background-color: head.$white;
+  width: 50%;
+  height: 100vh;
 }
 
 .close-icon {
-  // display: none;
+  padding: 1rem;
 }
 
 .menu-list {
-  // display: none;
+  padding: 1rem;
+
+  li {
+    margin-bottom: .9rem;
+
+    a {
+      color: head.$very-dark-blue;
+      font-weight: 700;
+    }
+  }
 }
 
 .header-cart {
