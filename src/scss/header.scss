@@ -1,1 +1,28 @@
 @use  './variables.scss' as head;
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-section-1 {
+  display: flex;
+  align-items: center;
+}
+
+.header-section-2 {
+  align-items: center;
+}
+
+.close-icon {
+  display: none;
+}
+
+.menu-list {
+  display: none;
+}
+
+.avatar {
+  width: 3rem;
+}
