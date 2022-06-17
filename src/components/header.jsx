@@ -15,17 +15,19 @@ const HeaderMenuList = (props) => {
 const Header = () => {
   return (
     <header>
-      <img src={Close} alt="close" className="close-icon"/>
       <div className="header-section-1">
+        <img src={Close} alt="close" className="close-icon"/>
         <img src={MobileMenu} alt="mobile menu" className="mobile-menu" />
         <img src={Logo} alt="logo" className="logo" />
-        <ul className="menu-list">
-          <HeaderMenuList link="#collections" list="Collections"/>
-          <HeaderMenuList link="#men" list="Men"/>
-          <HeaderMenuList link="#women" list="Women"/>
-          <HeaderMenuList link="#about" list="About"/>
-          <HeaderMenuList link="#contact" list="Contact"/>
-        </ul>
+        <nav className="nav-links">
+          <ul className="menu-list">
+            <HeaderMenuList link="#collections" list="Collections"/>
+            <HeaderMenuList link="#men" list="Men"/>
+            <HeaderMenuList link="#women" list="Women"/>
+            <HeaderMenuList link="#about" list="About"/>
+            <HeaderMenuList link="#contact" list="Contact"/>
+          </ul>
+        </nav>
       </div>
       <div className="header-section-2">
         <img src={HeaderCart} alt="cart" className="header-cart"/>
