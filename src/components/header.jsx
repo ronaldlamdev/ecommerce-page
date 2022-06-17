@@ -13,17 +13,27 @@ const HeaderMenuList = (props) => {
 }
 
 // Open Menu when clicked
+const MobileMenuOpener = () => {
+  const OpenMenuList = document.getElementById('mobile-menu');
+  OpenMenuList.style.display = 'block';
+}
 
+// Close Menu when clicked
+
+const MobileMenuCloser = () => {
+  const CloseMenuList = document.getElementById('mobile-menu');
+  CloseMenuList.style.display = 'none'
+}
 
 const Header = () => {
   return (
     <header>
       <div className="header-section-1">
-        <img src={MobileMenu} alt="mobile menu" className="mobile-menu" />
+        <img src={MobileMenu} alt="mobile menu" className="mobile-menu" onClick={MobileMenuOpener}/>
         <img src={Logo} alt="logo" className="logo" />
-        <nav className="nav-links">
+        <nav className="nav-links" id="mobile-menu">
           <div className="nav-links-container">
-            <img src={Close} alt="close" className="close-icon"/>
+            <img src={Close} alt="close" className="close-icon" onClick={MobileMenuCloser}/>
             <ul className="menu-list">
               <HeaderMenuList link="#collections" list="Collections"/>
               <HeaderMenuList link="#men" list="Men"/>
