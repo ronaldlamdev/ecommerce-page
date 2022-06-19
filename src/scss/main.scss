@@ -1,9 +1,46 @@
+// $orange: hsl(26, 100%, 55%); //orange
+// $pale-orange: hsl(25, 100%, 94%); //pale orange
+// $very-dark-blue: hsl(220, 13%, 13%); //very dark blue 
+// $dark-grayish-blue: hsl(219, 9%, 45%); //dark grayish blue
+// $grayish-blue: hsl(220, 14%, 75%); //grayish blue
+// $light-grayish-blue: hsl(223, 64%, 98%); //light grayish blue
+// $white: hsl(0, 0%, 100%); //white
+// $black: hsl(0, 0%, 0%, .75); //black (with 75% opacity for modal background
+// $p-font-size: 1rem; //paragraph font size
+
 @use './variables.scss' as main;
 
 .product-images-container {
   width: 100%;
+  position: relative;
 
   .product-img {
     width: 100%;
   }
+}
+
+.carousel-container {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chevron-container {
+  background-color: main.$white;
+  width: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  padding: .5rem .5rem ;
+}
+
+.left-chevron {
+  margin-left: .5rem;
+  cursor: pointer;
+}
+
+.right-chevron {
+  margin-right: .5rem;
+  cursor: pointer;
 }

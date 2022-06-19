@@ -14,14 +14,21 @@ const Main = () => {
   return (
     <main>
       <div className="images-container">
+        {/* Full size images */}
         <div className="product-images-container">
           <img className="product-img" src={ProductImg1} alt="product pic"></img>
           <img className="product-img" src={ProductImg2} alt="product pic" hidden></img>
           <img className="product-img" src={ProductImg3} alt="product pic" hidden></img>
           <img className="product-img" src={ProductImg4} alt="product pic" hidden></img>
-        </div>
-        <div className="carousel-container">
-          
+          {/* Carousel Arrows from Font Awesome */}
+          <div className="carousel-container">
+            <div className="left-chevron chevron-container">
+              <FontAwesomeIcon icon={faChevronLeft } />
+            </div>
+            <div className="right-chevron chevron-container">
+              <FontAwesomeIcon icon={faChevronRight } />
+            </div>
+          </div>
         </div>
       </div>
     </main>
