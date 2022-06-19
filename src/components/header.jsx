@@ -29,8 +29,11 @@ const Header = () => {
   return (
     <header>
       <div className="header-section-1">
+        {/* Mobile Menu Icon */}
         <img src={MobileMenu} alt="mobile menu" className="mobile-menu" onClick={MobileMenuOpener}/>
+        {/* Logo */}
         <img src={Logo} alt="logo" className="logo" />
+        {/* Menu List (Hidden when Mobile/Display on Tablet and Desktop) */}
         <nav className="nav-links" id="mobile-menu">
           <div className="nav-links-container">
             <img src={Close} alt="close" className="close-icon" onClick={MobileMenuCloser}/>
@@ -45,7 +48,9 @@ const Header = () => {
         </nav>
       </div>
       <div className="header-section-2">
+        {/* Cart */}
         <img src={HeaderCart} alt="cart" className="header-cart"/>
+        {/* Avatar */}
         <img src={Avatar} alt="avatar" className="avatar"/>
       </div>
     </header>

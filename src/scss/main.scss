@@ -1,0 +1,9 @@
+@use './variables.scss' as main;
+
+.product-images-container {
+  width: 100%;
+
+  .product-img {
+    width: 100%;
+  }
+}

@@ -60,6 +60,13 @@ header {
   width: 2rem;
 }
 
+.product-images-container {
+  width: 100%;
+}
+.product-images-container .product-img {
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
