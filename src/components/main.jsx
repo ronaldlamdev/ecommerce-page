@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import ProductImg1 from '../images/image-product-1.jpg';
 import ProductImg2 from '../images/image-product-2.jpg';
 import ProductImg3 from '../images/image-product-3.jpg';
@@ -26,10 +26,10 @@ const Main = () => {
           {/* Carousel Arrows from Font Awesome */}
           <div className="carousel-container">
             <div className="left-chevron chevron-container">
-              <FontAwesomeIcon className="previous" icon={faChevronLeft } />
+              <FontAwesomeIcon className="chevron previous" icon={faChevronLeft } />
             </div>
             <div className="right-chevron chevron-container">
-              <FontAwesomeIcon className="next" icon={faChevronRight } />
+              <FontAwesomeIcon className="chevron next" icon={faChevronRight } />
             </div>
           </div>
         </div>
@@ -46,9 +46,9 @@ const Main = () => {
       <div className="text-container">
         {/* Information about product */}
         <div className="info-container">
-          <h1>Sneaker Company</h1>
-          <h1>Fall Limited Edition Sneakers</h1>
-          <p>
+          <h1 className="title">Sneaker Company</h1>
+          <h1 className="product-name">Fall Limited Edition Sneakers</h1>
+          <p className="description">
             These low profile sneakers are your perfect casual
             wear companion. Featuring a durable rubber outer sole,
             they'll withstand everything the weather can offer.
@@ -57,22 +57,22 @@ const Main = () => {
 
         {/* Price */}
         <div className="price-container">
-          <h1 className="net-price">$125.00 <span>50%</span></h1>
-          <h2>$250.00</h2>
+          <h1 className="net-price">$125.00 <span className="discount">50%</span></h1>
+          <h2 className="gross-price">$250.00</h2>
         </div>
 
         {/* Quantity Container */}
         <div className="buy-quantity-container">
           {/* Div to add or subtract from container */}
           <div className="quantity-container">
-            <img src={Minus} alt="minus" />
+            <img src={Minus} className="minus counter" alt="minus" />
             <span className="quantity">0</span>
-            <img src={Plus} alt="plus" />
+            <img src={Plus} className="plus counter" alt="plus" />
           </div>
-          
+
           {/* Add to cart */}
-          <button>
-            <img className="cart" src={Cart} alt="cart"/>
+          <button className="add-to-cart">
+            <FontAwesomeIcon icon={faCartShopping} className='cart'/>
             Add to cart
           </button>
         </div>

@@ -84,6 +84,10 @@ header {
   padding: 0.3rem 0.3rem;
 }
 
+.chevron:hover {
+  opacity: 0.7;
+}
+
 .left-chevron {
   margin-left: 1rem;
   cursor: pointer;
@@ -96,6 +100,102 @@ header {
 
 .thumbnail-images-container {
   display: none;
+}
+
+.text-container {
+  margin-inline: 1rem;
+  margin-top: 1.2rem;
+  width: 90%;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+.info-container .title {
+  font-size: 1.5rem;
+  color: hsl(26deg, 100%, 55%);
+}
+.info-container .product-name {
+  font-size: 2rem;
+  margin-top: 1.2rem;
+}
+.info-container .description {
+  margin-top: 1rem;
+  color: hsl(219deg, 9%, 45%);
+  line-height: 1.5;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.75rem;
+}
+.price-container .net-price {
+  font-size: 1.75rem;
+}
+.price-container .net-price .discount {
+  font-size: 1rem;
+  background-color: hsl(25deg, 100%, 94%);
+  color: hsl(26deg, 100%, 55%);
+  border-radius: 25%;
+  padding: 0.2rem;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+.price-container .gross-price {
+  font-size: 1.2rem;
+  color: hsl(220deg, 14%, 75%);
+  text-decoration: line-through;
+}
+
+.buy-quantity-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.buy-quantity-container .quantity-container {
+  display: flex;
+  margin-top: 0.5rem;
+  padding: 1rem 0.5rem;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(223deg, 64%, 98%);
+  border-radius: 0.8rem;
+}
+.buy-quantity-container .quantity-container .counter {
+  cursor: pointer;
+}
+.buy-quantity-container .quantity-container .counter:hover {
+  opacity: 0.5;
+}
+.buy-quantity-container .quantity-container span {
+  font-weight: 700;
+}
+.buy-quantity-container .add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0.5rem;
+  width: 95%;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.buy-quantity-container .add-to-cart .cart {
+  margin-right: 0.5rem;
+}
+.buy-quantity-container .add-to-cart:hover {
+  opacity: 0.7;
 }
 
 * {
