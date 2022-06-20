@@ -9,6 +9,9 @@ import Thumbnail1 from '../images/image-product-1-thumbnail.jpg';
 import Thumbnail2 from '../images/image-product-2-thumbnail.jpg';
 import Thumbnail3 from '../images/image-product-3-thumbnail.jpg';
 import Thumbnail4 from '../images/image-product-4-thumbnail.jpg';
+import Minus from '../images/icon-minus.svg';
+import Plus from '../images/icon-plus.svg';
+import Cart from '../images/icon-cart.svg';
 
 const Main = () => {
   return (
@@ -23,12 +26,55 @@ const Main = () => {
           {/* Carousel Arrows from Font Awesome */}
           <div className="carousel-container">
             <div className="left-chevron chevron-container">
-              <FontAwesomeIcon icon={faChevronLeft } />
+              <FontAwesomeIcon className="previous" icon={faChevronLeft } />
             </div>
             <div className="right-chevron chevron-container">
-              <FontAwesomeIcon icon={faChevronRight } />
+              <FontAwesomeIcon className="next" icon={faChevronRight } />
             </div>
           </div>
+        </div>
+
+        {/* Thumbnails */}
+        <div className="thumbnail-images-container">
+          <img className="thumbnail" src={Thumbnail1} alt="thumbnail"></img>
+          <img className="thumbnail" src={Thumbnail2} alt="thumbnail"></img>
+          <img className="thumbnail" src={Thumbnail3} alt="thumbnail"></img>
+          <img className="thumbnail" src={Thumbnail4} alt="thumbnail"></img>
+        </div>
+      </div>
+
+      <div className="text-container">
+        {/* Information about product */}
+        <div className="info-container">
+          <h1>Sneaker Company</h1>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low profile sneakers are your perfect casual
+            wear companion. Featuring a durable rubber outer sole,
+            they'll withstand everything the weather can offer.
+          </p>
+        </div>
+
+        {/* Price */}
+        <div className="price-container">
+          <h1 className="net-price">$125.00 <span>50%</span></h1>
+          <h2>$250.00</h2>
+        </div>
+
+        {/* Quantity Container */}
+        <div className="buy-quantity-container">
+          {/* Div to add or subtract from container */}
+          <div className="quantity-container">
+            <img src={Minus} alt="minus" />
+            <span className="quantity">0</span>
+            <img src={Plus} alt="plus" />
+          </div>
+          
+          {/* Add to cart */}
+          <button>
+            <img className="cart" src={Cart} alt="cart"/>
+            Add to cart
+          </button>
         </div>
       </div>
     </main>
