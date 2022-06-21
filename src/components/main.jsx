@@ -35,7 +35,7 @@ const Main = () => {
 
         {/* Thumbnails */}
         <div className="thumbnail-images-container">
-          <img className="thumbnail" src={Thumbnail1} alt="thumbnail"></img>
+          <img className="thumbnail active" src={Thumbnail1} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail2} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail3} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail4} alt="thumbnail"></img>
