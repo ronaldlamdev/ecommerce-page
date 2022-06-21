@@ -1,0 +1,49 @@
+// $orange: hsl(26, 100%, 55%); //orange
+// $pale-orange: hsl(25, 100%, 94%); //pale orange
+// $very-dark-blue: hsl(220, 13%, 13%); //very dark blue 
+// $dark-grayish-blue: hsl(219, 9%, 45%); //dark grayish blue
+// $grayish-blue: hsl(220, 14%, 75%); //grayish blue
+// $light-grayish-blue: hsl(223, 64%, 98%); //light grayish blue
+// $white: hsl(0, 0%, 100%); //white
+// $black: hsl(0, 0%, 0%, .75); //black (with 75% opacity for modal background
+// $p-font-size: 1rem; //paragraph font size
+
+@use './variables.scss' as media;
+
+@media (min-width: 768px) {
+
+  .mobile-menu {
+    display: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    position: relative;
+    background: none;
+    height: 1.25rem;
+    width: 10vw;
+    padding-left: 2.5rem;
+  }
+
+  .nav-links-container {
+    background: none;
+
+    .menu-list {
+      display: flex;
+      padding: 0;
+      gap: 1rem;
+
+      li {
+
+        a {
+          color: media.$grayish-blue;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .close-icon {
+    display: none;
+  }
+}

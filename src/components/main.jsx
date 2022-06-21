@@ -11,7 +11,6 @@ import Thumbnail3 from '../images/image-product-3-thumbnail.jpg';
 import Thumbnail4 from '../images/image-product-4-thumbnail.jpg';
 import Minus from '../images/icon-minus.svg';
 import Plus from '../images/icon-plus.svg';
-import Cart from '../images/icon-cart.svg';
 
 const Main = () => {
   return (
