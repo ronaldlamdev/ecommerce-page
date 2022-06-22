@@ -93,6 +93,7 @@
     border-top: 1px solid media.$grayish-blue;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
     margin-inline: 3rem;
   }
 
@@ -104,6 +105,24 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+
+  .price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buy-quantity-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    .quantity-container {
+      width: 40%;
+    }
+
   }
 
 }

@@ -191,6 +191,7 @@ header {
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
+  box-shadow: 2px 15px 8px hsl(25deg, 100%, 94%);
 }
 .buy-quantity-container .add-to-cart .cart {
   margin-right: 0.5rem;
@@ -274,6 +275,7 @@ header {
     border-top: 1px solid hsl(220deg, 14%, 75%);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
     margin-inline: 3rem;
   }
 
@@ -285,6 +287,23 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buy-quantity-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .buy-quantity-container .quantity-container {
+    width: 40%;
   }
 }
 * {
