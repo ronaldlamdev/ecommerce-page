@@ -47,10 +47,6 @@
     display: none;
   }
 
-  .header-section-2 {
-    margin-right: 2rem;
-  }
-
   .header-cart {
     margin-right: 1rem;
   }
@@ -61,6 +57,10 @@
 
   .carousel-container {
     display: none;
+  }
+
+  .thumbnail {
+    width: 100%;
   }
 
   .thumbnail-images-container {
@@ -80,4 +80,8 @@
     border: 2px solid media.$orange;
     opacity: .7;
   }
+}
+
+@media (min-width: 992px) {
+
 }
