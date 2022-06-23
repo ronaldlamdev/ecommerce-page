@@ -360,6 +360,24 @@ header {
     width: 85%;
     column-gap: 2rem;
   }
+
+  .info-container {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .info-container .description {
+    width: 60%;
+  }
+
+  .buy-quantity-container {
+    width: 80%;
+  }
+
+  .price-container {
+    margin-top: 4rem;
+  }
 }
 * {
   margin: 0;
