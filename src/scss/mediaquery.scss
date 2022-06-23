@@ -104,7 +104,11 @@
   .text-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+
+  .info-container {
+    margin-bottom: 2rem;
   }
 
   .price-container {
@@ -118,6 +122,7 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    margin-top: 4rem;
 
     .quantity-container {
       width: 40%;

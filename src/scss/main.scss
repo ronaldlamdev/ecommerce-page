@@ -126,6 +126,7 @@
 
     .counter {
       cursor: pointer;
+      transition: 300ms;
     }
 
     .counter:hover {
@@ -153,6 +154,7 @@
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 2px 15px 8px main.$pale-orange;
+    transition: 300ms;
 
     .cart {
       margin-right: .5rem;
@@ -161,5 +163,15 @@
 
   .add-to-cart:hover {
     opacity: .7;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .nav-links {
+    // margin-left: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
   }
 }
