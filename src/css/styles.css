@@ -287,7 +287,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 10px;
   }
 
   .price-container {
@@ -323,8 +322,9 @@ a {
 
 .App {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */
