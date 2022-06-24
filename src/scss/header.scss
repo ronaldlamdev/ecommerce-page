@@ -58,13 +58,30 @@ header {
   padding: 1rem;
 
   li {
-    margin-bottom: .9rem;
-
-    a {
-      color: head.$dark-grayish-blue;
-      font-size: 1.2rem;
-    }
+    position: relative;
+    padding-bottom: 1.5rem;
   }
+
+  li::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  background-color: head.$orange;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  }
+
+  li:hover::before {
+    opacity: 1;
+  }
+}
+
+.menu-link {
+  font-size: 1.2rem;
+  color: head.$black;
 }
 
 .header-cart {

@@ -45,11 +45,27 @@ header {
   padding: 1rem;
 }
 .menu-list li {
-  margin-bottom: 0.9rem;
+  position: relative;
+  padding-bottom: 1.5rem;
 }
-.menu-list li a {
-  color: hsl(219deg, 9%, 45%);
+.menu-list li::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  background-color: hsl(26deg, 100%, 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.menu-list li:hover::before {
+  opacity: 1;
+}
+
+.menu-link {
   font-size: 1.2rem;
+  color: hsla(0deg, 0%, 0%, 0.75);
 }
 
 .header-cart {
