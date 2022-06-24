@@ -48,16 +48,19 @@ header {
   margin-bottom: 0.9rem;
 }
 .menu-list li a {
-  color: hsl(220deg, 13%, 13%);
+  color: hsl(219deg, 9%, 45%);
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .header-cart {
   padding-right: 0.75rem;
+  cursor: pointer;
 }
 
 .avatar {
   width: 2rem;
+  cursor: pointer;
 }
 
 .images-container {
@@ -377,6 +380,32 @@ header {
 
   .price-container {
     margin-top: 4rem;
+  }
+}
+@media (min-width: 1920px) {
+  main {
+    column-gap: 0;
+  }
+
+  .product-images-container {
+    width: 70%;
+  }
+
+  .thumbnail-images-container {
+    width: 70%;
+  }
+
+  .text-container {
+    margin: 0;
+  }
+  .text-container .info-container .title {
+    font-size: 1.8rem;
+  }
+  .text-container .info-container .product-name {
+    font-size: 2.2rem;
+  }
+  .text-container .info-container .description {
+    font-size: 1.1rem;
   }
 }
 * {
