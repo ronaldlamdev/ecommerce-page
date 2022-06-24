@@ -8,7 +8,7 @@ import Avatar from '../images/image-avatar.png';
 // Create List with Link in Header Menu
 const HeaderMenuList = (props) => {
   return (
-    <li><a href={props.link}>{props.list}</a></li>
+    <li><a className="menu-link" href={props.link}>{props.list}</a></li>
   )
 }
 

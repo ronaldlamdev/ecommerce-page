@@ -63,10 +63,7 @@ header {
     a {
       color: head.$dark-grayish-blue;
       font-size: 1.2rem;
-      font-weight: 700;
     }
-
-    
   }
 }
 
@@ -78,4 +75,10 @@ header {
 .avatar {
   width: 2rem;
   cursor: pointer;
+  transition: 100ms;
+}
+
+.avatar:hover {
+  border: .15rem solid head.$orange;
+  border-radius: 50%;
 }

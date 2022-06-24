@@ -50,7 +50,6 @@ header {
 .menu-list li a {
   color: hsl(219deg, 9%, 45%);
   font-size: 1.2rem;
-  font-weight: 700;
 }
 
 .header-cart {
@@ -61,6 +60,12 @@ header {
 .avatar {
   width: 2rem;
   cursor: pointer;
+  transition: 100ms;
+}
+
+.avatar:hover {
+  border: 0.15rem solid hsl(26deg, 100%, 55%);
+  border-radius: 50%;
 }
 
 .images-container {
