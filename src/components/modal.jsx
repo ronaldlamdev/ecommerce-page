@@ -13,10 +13,9 @@ import ModalThumbnail4 from '../images/image-product-4-thumbnail.jpg';
 
 const Modal = () => {
   return (
-    <dialog open>
-      <FontAwesomeIcon className="modal-close" icon={faClose} />
-      <div className="modal-container">
+    <div className="modal-container">
 
+      <FontAwesomeIcon className="modal-close" icon={faClose} />
         {/* Full size images */}
         <div className="modal-product-images-container">
           <img className="modal-img" src={ModalFullImg1} alt="modal pic" />
@@ -24,26 +23,25 @@ const Modal = () => {
           <img className="modal-img" src={ModalFullImg3} alt="modal pic" hidden/>
           <img className="modal-img" src={ModalFullImg4} alt="modal pic" hidden/>
 
-          {/* Previous and Next functions */}
-          <div className="modal-carousel-container">
-            <div className="modal-left-chevron modal-chevron-container">
-              <FontAwesomeIcon className="modal-chevron modal-previous" icon={faChevronLeft}/>
-            </div>
-            <div className="modal-right-chevron modal-chevron-container">
-              <FontAwesomeIcon className="modal-chevron modal-next" icon={faChevronRight}/>
-            </div>
+        {/* Previous and Next functions */}
+        <div className="modal-carousel-container">
+          <div className="modal-left-chevron modal-chevron-container">
+            <FontAwesomeIcon className="modal-chevron modal-previous" icon={faChevronLeft}/>
+          </div>
+          <div className="modal-right-chevron modal-chevron-container">
+            <FontAwesomeIcon className="modal-chevron modal-next" icon={faChevronRight}/>
           </div>
         </div>
-
-        {/* Thumbnail images */}
-        <div className="modal-thumbnail-images-container">
-          <img className="modal-thumbnail" src={ModalThumbnail1} alt-="modal-thumbnail"></img>
-          <img className="modal-thumbnail" src={ModalThumbnail2} alt-="modal-thumbnail"></img>
-          <img className="modal-thumbnail" src={ModalThumbnail3} alt-="modal-thumbnail"></img>
-          <img className="modal-thumbnail" src={ModalThumbnail4} alt-="modal-thumbnail"></img>
-        </div>
       </div>
-    </dialog>
+
+      {/* Thumbnail images */}
+      <div className="modal-thumbnail-images-container">
+        <img className="modal-thumbnail" src={ModalThumbnail1} alt="thumbnail"/>
+        <img className="modal-thumbnail" src={ModalThumbnail2} alt="thumbnail"/>
+        <img className="modal-thumbnail" src={ModalThumbnail3} alt="thumbnail"/>
+        <img className="modal-thumbnail" src={ModalThumbnail4} alt="thumbnail"/>
+      </div>
+    </div>
   )
 }
 

@@ -308,6 +308,10 @@ header {
     padding-inline: 2.5rem;
   }
 
+  .nav-links {
+    z-index: 0;
+  }
+
   main {
     padding-top: 1rem;
     display: grid;
@@ -433,6 +437,23 @@ header {
     font-size: 1.1rem;
   }
 }
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsla(0deg, 0%, 0%, 0.8);
+}
+
+.modal-product-images-container {
+  width: 100%;
+}
+
+.modal-img {
+  width: 50%;
+}
+
 * {
   margin: 0;
   padding: 0;
