@@ -10,6 +10,8 @@
 
 @use './variables.scss' as media;
 
+// screen size: 768px (tablet minimum size)
+
 @media (min-width: 768px) {
 
   .mobile-menu {
@@ -86,6 +88,8 @@
   }
 }
 
+// screen size: 1200px (laptop screen size)
+
 @media (min-width: 1200px) {
 
   header {
@@ -133,6 +137,8 @@
   }
 }
 
+// screen size: 1440px (desktop minimum screen size)
+
 @media (min-width: 1440px) {
 
   .product-images-container {
@@ -143,6 +149,8 @@
     width: 85%;
   }
 }
+
+// screen size: 1600px (desktop size)
 
 @media (min-width: 1600px) {
 
@@ -197,6 +205,8 @@
     margin-top: 4rem;
   }
 }
+
+// screen size: 1920px (full browser size)
 
 @media (min-width: 1920px) {
 
