@@ -10,6 +10,10 @@
 
 @use './variables.scss' as main;
 
+main {
+  border-top: 1px solid main.$grayish-blue;
+}
+
 .images-container {
   display: flex;
   flex-direction: column;
@@ -20,6 +24,7 @@
 .product-images-container {
   width: 100%;
   position: relative;
+  margin-top: 1rem;
 
   .product-img {
     width: 100%;

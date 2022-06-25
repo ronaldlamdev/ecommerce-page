@@ -81,6 +81,10 @@ header {
 
 .menu-link {
   font-size: 1.2rem;
+  color: head.$grayish-blue;
+}
+
+.menu-link:hover {
   color: head.$black;
 }
 

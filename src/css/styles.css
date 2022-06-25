@@ -65,6 +65,10 @@ header {
 
 .menu-link {
   font-size: 1.2rem;
+  color: hsl(220deg, 14%, 75%);
+}
+
+.menu-link:hover {
   color: hsla(0deg, 0%, 0%, 0.75);
 }
 
@@ -84,6 +88,10 @@ header {
   border-radius: 50%;
 }
 
+main {
+  border-top: 1px solid hsl(220deg, 14%, 75%);
+}
+
 .images-container {
   display: flex;
   flex-direction: column;
@@ -94,6 +102,7 @@ header {
 .product-images-container {
   width: 100%;
   position: relative;
+  margin-top: 1rem;
 }
 .product-images-container .product-img {
   width: 100%;
@@ -305,7 +314,6 @@ header {
 
   main {
     padding-top: 1rem;
-    border-top: 1px solid hsl(220deg, 14%, 75%);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
