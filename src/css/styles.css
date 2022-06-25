@@ -65,10 +65,6 @@ header {
 
 .menu-link {
   font-size: 1.2rem;
-  color: hsl(220deg, 14%, 75%);
-}
-
-.menu-link:hover {
   color: hsla(0deg, 0%, 0%, 0.75);
 }
 
@@ -86,10 +82,6 @@ header {
 .avatar:hover {
   border: 0.15rem solid hsl(26deg, 100%, 55%);
   border-radius: 50%;
-}
-
-main {
-  border-top: 1px solid hsl(220deg, 14%, 75%);
 }
 
 .images-container {
@@ -279,6 +271,10 @@ main {
 
   .avatar {
     width: 3rem;
+  }
+
+  main {
+    border-top: 1px solid hsl(220deg, 14%, 75%);
   }
 
   .carousel-container {
