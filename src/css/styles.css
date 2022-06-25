@@ -118,7 +118,7 @@ header {
 }
 
 .chevron:hover {
-  opacity: 0.7;
+  color: hsl(26deg, 100%, 55%);
 }
 
 .left-chevron {
