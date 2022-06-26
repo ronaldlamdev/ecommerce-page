@@ -12,12 +12,21 @@ import ModalThumbnail4 from '../images/image-product-4-thumbnail.jpg';
 
 
 const Modal = () => {
+
+  const closeModal = () => {
+    const modal = document.getElementById('modal');
+    if (modal.style.display === 'flex') {
+      modal.style.display = 'none';
+    } else {
+      modal.style.display = 'flex';
+    }
+  }
+
   return (
-    <div className="modal-container">
+    <div id="modal" className="modal-container">
 
       {/* Modal Close Icon */}
-      
-      <FontAwesomeIcon className="modal-close" icon={faClose} />
+      <FontAwesomeIcon onClick={closeModal} className="modal-close" icon={faClose} />
       
       {/* Full size images */}
       <div className="modal-product-images-container">

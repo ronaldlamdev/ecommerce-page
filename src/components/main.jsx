@@ -13,15 +13,25 @@ import Minus from '../images/icon-minus.svg';
 import Plus from '../images/icon-plus.svg';
 
 const Main = () => {
+
+  const DisplayModal = () => {
+    const modal = document.getElementById('modal');
+    if (modal.style.display === "none") {
+      modal.style.display = "flex";
+    } else {
+      modal.style.display = 'none';
+    }
+  }
+
   return (
     <main>
       <div className="images-container">
         {/* Full size images */}
         <div className="product-images-container">
-          <img className="product-img" src={ProductImg1} alt="product pic"></img>
-          <img className="product-img" src={ProductImg2} alt="product pic" hidden></img>
-          <img className="product-img" src={ProductImg3} alt="product pic" hidden></img>
-          <img className="product-img" src={ProductImg4} alt="product pic" hidden></img>
+          <img onClick={DisplayModal} className="product-img" src={ProductImg1} alt="product pic"></img>
+          <img onClick={DisplayModal} className="product-img" src={ProductImg2} alt="product pic" hidden></img>
+          <img onClick={DisplayModal} className="product-img" src={ProductImg3} alt="product pic" hidden></img>
+          <img onClick={DisplayModal} className="product-img" src={ProductImg4} alt="product pic" hidden></img>
           {/* Carousel Arrows from Font Awesome */}
           <div className="carousel-container">
             <div className="left-chevron chevron-container">

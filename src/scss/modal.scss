@@ -28,6 +28,8 @@
 .modal-close {
   align-self: flex-end;
   margin-inline: 19rem;
+  color: modal.$grayish-blue;
+  font-size: 1.5rem;
 }
 
 .modal-close:hover {
@@ -44,7 +46,7 @@
 .modal-carousel-container {
   position: absolute;
   top: 50%;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
