@@ -46,10 +46,26 @@
 .modal-carousel-container {
   position: absolute;
   top: 50%;
-  width: 50%;
+  width: 52%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.modal-chevron-container {
+  background-color: modal.$white;
+  width: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  padding: .3rem .3rem ;
+}
+
+.modal-left-chevron, .modal-right-chevron {
+  cursor: pointer;
+}
+
+.modal-left-chevron:hover, .modal-right-chevron:hover {
+  color: modal.$orange;
 }
 
 .modal-img {
@@ -72,4 +88,5 @@
   opacity: .8;
   border: 2px solid modal.$orange;
 }
+
 

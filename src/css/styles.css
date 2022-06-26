@@ -478,10 +478,26 @@ header {
 .modal-carousel-container {
   position: absolute;
   top: 50%;
-  width: 50%;
+  width: 52%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.modal-chevron-container {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  padding: 0.3rem 0.3rem;
+}
+
+.modal-left-chevron, .modal-right-chevron {
+  cursor: pointer;
+}
+
+.modal-left-chevron:hover, .modal-right-chevron:hover {
+  color: hsl(26deg, 100%, 55%);
 }
 
 .modal-img {
