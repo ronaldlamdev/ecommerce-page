@@ -11,19 +11,63 @@
 @use './variables.scss' as modal;
 
 .modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   background-color: hsla(0, 0, 0, .8);
+  gap: 1.5rem;
+  margin: auto;
+}
+
+.modal-close {
+  align-self: flex-end;
+  margin-inline: 19rem;
+}
+
+.modal-close:hover {
+  color: modal.$orange;
+  cursor: pointer;
 }
 
 .modal-product-images-container {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-carousel-container {
+  position: absolute;
+  top: 50%;
   width: 100%;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .modal-img {
-  width: 50%;
+  width: 90%;
+  border-radius: 1rem;
 }
+
+.modal-thumbnail-images-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.modal-thumbnail {
+  border-radius: 1rem;
+  width: 70%;
+  cursor: pointer;
+}
+
+.modal-thumbnail:hover {
+  opacity: .8;
+  border: 2px solid modal.$orange;
+}
+

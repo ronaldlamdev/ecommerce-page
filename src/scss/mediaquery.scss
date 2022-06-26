@@ -82,6 +82,11 @@
     cursor: pointer;
   }
 
+  .thumbnail:hover {
+    opacity: .7;
+    border: 2px solid media.$orange;
+  }
+
   .active {
     border: 2px solid media.$orange;
     opacity: .7;
