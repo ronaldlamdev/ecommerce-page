@@ -443,31 +443,42 @@ header {
   }
 }
 @media (max-width: 1999px) {
-  .modal-container {
+  .modal {
     display: none;
   }
 }
 @media (min-width: 1200px) {
-  .modal-container {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .modal {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     background-color: hsla(0deg, 0%, 0%, 0.8);
-    gap: 1.5rem;
-    margin: auto;
+  }
+
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+  }
+
+  .modal-product-images-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .modal-close {
-    align-self: flex-end;
-    margin-inline: 19rem;
     color: hsl(220deg, 14%, 75%);
     font-size: 1.5rem;
+    align-self: flex-end;
   }
 
   .modal-close:hover {
@@ -475,19 +486,17 @@ header {
     cursor: pointer;
   }
 
-  .modal-product-images-container {
-    width: 55%;
-    display: flex;
-    justify-content: center;
+  .modal-img {
+    width: 90%;
+    border-radius: 1rem;
   }
 
   .modal-carousel-container {
     position: absolute;
     top: 50%;
-    width: 52%;
+    width: 47%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   .modal-chevron-container {
@@ -506,11 +515,6 @@ header {
     color: hsl(26deg, 100%, 55%);
   }
 
-  .modal-img {
-    width: 90%;
-    border-radius: 1rem;
-  }
-
   .modal-thumbnail-images-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -520,6 +524,7 @@ header {
     border-radius: 1rem;
     width: 70%;
     cursor: pointer;
+    z-index: 3;
   }
 
   .modal-thumbnail:hover {

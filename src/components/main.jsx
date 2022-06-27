@@ -19,7 +19,7 @@ const Main = () => {
 
     if (window.innerWidth >= 1200) {
       if (modal.style.display === "none") {
-        modal.style.display = "flex";
+        modal.style.display = "block";
       } else {
         modal.style.display = 'none';
       }

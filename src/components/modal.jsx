@@ -17,46 +17,47 @@ const Modal = () => {
     const modal = document.getElementById('modal');
 
     if (window.innerWidth >= 1200) {
-      if (modal.style.display === 'flex') {
+      if (modal.style.display === 'block') {
         modal.style.display = 'none';
       } else {
-        modal.style.display = 'flex';
+        modal.style.display = 'block';
       }
     }
   }
 
   return (
-    <div id="modal" className="modal-container">
+    <section id="modal" className="modal">
+      <div className="modal-container">
 
-      {/* Modal Close Icon */}
-      <FontAwesomeIcon onClick={closeModal} className="modal-close" icon={faClose} />
-      
-      {/* Full size images */}
-      <div className="modal-product-images-container">
-        <img className="modal-img" src={ModalFullImg1} alt="modal pic" />
-        <img className="modal-img" src={ModalFullImg2} alt="modal pic" hidden/>
-        <img className="modal-img" src={ModalFullImg3} alt="modal pic" hidden/>
-        <img className="modal-img" src={ModalFullImg4} alt="modal pic" hidden/>
+        {/* Full size images */}
+        <div className="modal-product-images-container">
+          {/* Modal Close Icon */}
+          <FontAwesomeIcon onClick={closeModal} className="modal-close" icon={faClose} />
+          <img className="modal-img" src={ModalFullImg1} alt="modal pic" />
+          <img className="modal-img" src={ModalFullImg2} alt="modal pic" hidden/>
+          <img className="modal-img" src={ModalFullImg3} alt="modal pic" hidden/>
+          <img className="modal-img" src={ModalFullImg4} alt="modal pic" hidden/>
 
-      {/* Previous and Next functions */}
-      <div className="modal-carousel-container">
-        <div className="modal-left-chevron modal-chevron-container">
-          <FontAwesomeIcon className="modal-chevron modal-previous" icon={faChevronLeft}/>
-        </div>
-        <div className="modal-right-chevron modal-chevron-container">
-          <FontAwesomeIcon className="modal-chevron modal-next" icon={faChevronRight}/>
+          {/* Previous and Next functions */}
+          <div className="modal-carousel-container">
+            <div className="modal-left-chevron modal-chevron-container">
+              <FontAwesomeIcon className="modal-chevron modal-previous" icon={faChevronLeft}/>
+            </div>
+            <div className="modal-right-chevron modal-chevron-container">
+              <FontAwesomeIcon className="modal-chevron modal-next" icon={faChevronRight}/>
+            </div>
+          </div>
+      </div>
+
+        {/* Thumbnail images */}
+        <div className="modal-thumbnail-images-container">
+          <img className="modal-thumbnail active" src={ModalThumbnail1} alt="thumbnail"/>
+          <img className="modal-thumbnail" src={ModalThumbnail2} alt="thumbnail"/>
+          <img className="modal-thumbnail" src={ModalThumbnail3} alt="thumbnail"/>
+          <img className="modal-thumbnail" src={ModalThumbnail4} alt="thumbnail"/>
         </div>
       </div>
-    </div>
-
-      {/* Thumbnail images */}
-    <div className="modal-thumbnail-images-container">
-      <img className="modal-thumbnail active" src={ModalThumbnail1} alt="thumbnail"/>
-      <img className="modal-thumbnail" src={ModalThumbnail2} alt="thumbnail"/>
-      <img className="modal-thumbnail" src={ModalThumbnail3} alt="thumbnail"/>
-      <img className="modal-thumbnail" src={ModalThumbnail4} alt="thumbnail"/>
-    </div>
-  </div>
+    </section>
   )
 }
 
