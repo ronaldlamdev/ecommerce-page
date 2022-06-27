@@ -16,10 +16,13 @@ const Main = () => {
 
   const DisplayModal = () => {
     const modal = document.getElementById('modal');
-    if (modal.style.display === "none") {
-      modal.style.display = "flex";
-    } else {
-      modal.style.display = 'none';
+
+    if (window.innerWidth >= 1200) {
+      if (modal.style.display === "none") {
+        modal.style.display = "flex";
+      } else {
+        modal.style.display = 'none';
+      }
     }
   }
 

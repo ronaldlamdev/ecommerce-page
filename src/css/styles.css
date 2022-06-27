@@ -442,85 +442,91 @@ header {
     font-size: 1.1rem;
   }
 }
-.modal-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: hsla(0deg, 0%, 0%, 0.8);
-  gap: 1.5rem;
-  margin: auto;
+@media (max-width: 1999px) {
+  .modal-container {
+    display: none;
+  }
 }
+@media (min-width: 1200px) {
+  .modal-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsla(0deg, 0%, 0%, 0.8);
+    gap: 1.5rem;
+    margin: auto;
+  }
 
-.modal-close {
-  align-self: flex-end;
-  margin-inline: 19rem;
-  color: hsl(220deg, 14%, 75%);
-  font-size: 1.5rem;
+  .modal-close {
+    align-self: flex-end;
+    margin-inline: 19rem;
+    color: hsl(220deg, 14%, 75%);
+    font-size: 1.5rem;
+  }
+
+  .modal-close:hover {
+    color: hsl(26deg, 100%, 55%);
+    cursor: pointer;
+  }
+
+  .modal-product-images-container {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-carousel-container {
+    position: absolute;
+    top: 50%;
+    width: 52%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-chevron-container {
+    background-color: hsl(0deg, 0%, 100%);
+    width: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0.3rem 0.3rem;
+  }
+
+  .modal-left-chevron, .modal-right-chevron {
+    cursor: pointer;
+  }
+
+  .modal-left-chevron:hover, .modal-right-chevron:hover {
+    color: hsl(26deg, 100%, 55%);
+  }
+
+  .modal-img {
+    width: 90%;
+    border-radius: 1rem;
+  }
+
+  .modal-thumbnail-images-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .modal-thumbnail {
+    border-radius: 1rem;
+    width: 70%;
+    cursor: pointer;
+  }
+
+  .modal-thumbnail:hover {
+    opacity: 0.8;
+    border: 2px solid hsl(26deg, 100%, 55%);
+  }
 }
-
-.modal-close:hover {
-  color: hsl(26deg, 100%, 55%);
-  cursor: pointer;
-}
-
-.modal-product-images-container {
-  width: 55%;
-  display: flex;
-  justify-content: center;
-}
-
-.modal-carousel-container {
-  position: absolute;
-  top: 50%;
-  width: 52%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-chevron-container {
-  background-color: hsl(0deg, 0%, 100%);
-  width: 2rem;
-  text-align: center;
-  border-radius: 50%;
-  padding: 0.3rem 0.3rem;
-}
-
-.modal-left-chevron, .modal-right-chevron {
-  cursor: pointer;
-}
-
-.modal-left-chevron:hover, .modal-right-chevron:hover {
-  color: hsl(26deg, 100%, 55%);
-}
-
-.modal-img {
-  width: 90%;
-  border-radius: 1rem;
-}
-
-.modal-thumbnail-images-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.modal-thumbnail {
-  border-radius: 1rem;
-  width: 70%;
-  cursor: pointer;
-}
-
-.modal-thumbnail:hover {
-  opacity: 0.8;
-  border: 2px solid hsl(26deg, 100%, 55%);
-}
-
 * {
   margin: 0;
   padding: 0;

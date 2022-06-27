@@ -15,10 +15,13 @@ const Modal = () => {
 
   const closeModal = () => {
     const modal = document.getElementById('modal');
-    if (modal.style.display === 'flex') {
-      modal.style.display = 'none';
-    } else {
-      modal.style.display = 'flex';
+
+    if (window.innerWidth >= 1200) {
+      if (modal.style.display === 'flex') {
+        modal.style.display = 'none';
+      } else {
+        modal.style.display = 'flex';
+      }
     }
   }
 

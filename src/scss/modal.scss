@@ -10,83 +10,93 @@
 
 @use './variables.scss' as modal;
 
-.modal-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: hsla(0, 0, 0, .8);
-  gap: 1.5rem;
-  margin: auto;
+@media (max-width: 1999px) {
+  .modal-container {
+    display: none;
+  }
 }
 
-.modal-close {
-  align-self: flex-end;
-  margin-inline: 19rem;
-  color: modal.$grayish-blue;
-  font-size: 1.5rem;
-}
+@media (min-width: 1200px) {
 
-.modal-close:hover {
-  color: modal.$orange;
-  cursor: pointer;
-}
-
-.modal-product-images-container {
-  width: 55%;
-  display: flex;
-  justify-content: center;
-}
-
-.modal-carousel-container {
-  position: absolute;
-  top: 50%;
-  width: 52%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-chevron-container {
-  background-color: modal.$white;
-  width: 2rem;
-  text-align: center;
-  border-radius: 50%;
-  padding: .3rem .3rem ;
-}
-
-.modal-left-chevron, .modal-right-chevron {
-  cursor: pointer;
-}
-
-.modal-left-chevron:hover, .modal-right-chevron:hover {
-  color: modal.$orange;
-}
-
-.modal-img {
-  width: 90%;
-  border-radius: 1rem;
-}
-
-.modal-thumbnail-images-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.modal-thumbnail {
-  border-radius: 1rem;
-  width: 70%;
-  cursor: pointer;
-}
-
-.modal-thumbnail:hover {
-  opacity: .8;
-  border: 2px solid modal.$orange;
+  .modal-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsla(0, 0, 0, .8);
+    gap: 1.5rem;
+    margin: auto;
+  }
+  
+  .modal-close {
+    align-self: flex-end;
+    margin-inline: 19rem;
+    color: modal.$grayish-blue;
+    font-size: 1.5rem;
+  }
+  
+  .modal-close:hover {
+    color: modal.$orange;
+    cursor: pointer;
+  }
+  
+  .modal-product-images-container {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .modal-carousel-container {
+    position: absolute;
+    top: 50%;
+    width: 52%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-chevron-container {
+    background-color: modal.$white;
+    width: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    padding: .3rem .3rem ;
+  }
+  
+  .modal-left-chevron, .modal-right-chevron {
+    cursor: pointer;
+  }
+  
+  .modal-left-chevron:hover, .modal-right-chevron:hover {
+    color: modal.$orange;
+  }
+  
+  .modal-img {
+    width: 90%;
+    border-radius: 1rem;
+  }
+  
+  .modal-thumbnail-images-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .modal-thumbnail {
+    border-radius: 1rem;
+    width: 70%;
+    cursor: pointer;
+  }
+  
+  .modal-thumbnail:hover {
+    opacity: .8;
+    border: 2px solid modal.$orange;
+  }
+  
 }
 
 
