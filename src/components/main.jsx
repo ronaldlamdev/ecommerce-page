@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import ProductImg1 from '../images/image-product-1.jpg';
@@ -25,6 +25,8 @@ const Main = () => {
       }
     }
   }
+
+  const [quantity, setQuantity] = useState(0);
 
   return (
     <main>
@@ -77,9 +79,9 @@ const Main = () => {
         <div className="buy-quantity-container">
           {/* Div to add or subtract from container */}
           <div className="quantity-container">
-            <img src={Minus} className="minus counter" alt="minus" />
-            <span className="quantity">0</span>
-            <img src={Plus} className="plus counter" alt="plus" />
+            <img src={Minus} onClick={() => setQuantity(quantity - 1)} className="minus counter" alt="minus" />
+            <span id="quantity" className="quantity">{quantity}</span>
+            <img src={Plus} onClick={() => setQuantity(quantity + 1)} className="plus counter" alt="plus" />
           </div>
 
           {/* Add to cart */}
