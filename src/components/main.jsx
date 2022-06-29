@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import ProductImg1 from '../images/image-product-1.jpg';
@@ -88,7 +88,7 @@ const Main = () => {
 
           {/* Add to cart */}
           <button className="add-to-cart">
-            <FontAwesomeIcon icon={faCartShopping} className='cart'/>
+            <FontAwesomeIcon icon={faCartShopping} className='cart-icon'/>
             Add to cart
           </button>
         </div>
