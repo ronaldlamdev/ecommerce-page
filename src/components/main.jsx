@@ -11,6 +11,8 @@ import Thumbnail3 from '../images/image-product-3-thumbnail.jpg';
 import Thumbnail4 from '../images/image-product-4-thumbnail.jpg';
 import Minus from '../images/icon-minus.svg';
 import Plus from '../images/icon-plus.svg';
+import TrashCan from '../images/icon-delete.svg'
+import CartThumbnail from '../images/image-product-1-thumbnail.jpg';
 
 const Main = () => {
 
@@ -91,8 +93,29 @@ const Main = () => {
           </button>
         </div>
       </div>
+
+      <div className="cart">
+
+        <div className="cart-title">
+          <h2>Cart</h2>
+        </div>
+
+        <div className="cart-quantity-container">
+          {quantity === 0 ? <p>Your cart is empty</p>
+          : <div className="calc-quantity-container">
+              <img className="cart-thumbnail" src={CartThumbnail}
+              alt="cart thumbnail"/>
+              <div className="quantity-info-container">
+                <p className="cart-product-title">Fall Limited Edition Sneakers</p>
+                <p className="cal-quantity">$125.00 x {quantity} <span><strong>0</strong></span></p>
+              </div>
+              <img className="delete" src={TrashCan} alt="delete"/>
+            </div>}
+            <button className="checkout">Checkout</button>
+        </div>
+      </div>
     </main>
   )
 }
 
-export default Main
+export default Main;
