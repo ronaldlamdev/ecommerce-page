@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import ProductImg1 from '../images/image-product-1.jpg';
@@ -109,15 +109,19 @@ const Main = () => {
             </div>
           : <div className="calc-quantity-container">
 
-              {/* Cart thumbnail */}
-              <img className="cart-thumbnail" src={CartThumbnail}
-              alt="cart thumbnail"/>
+              <div className="cart-info-container">
+                {/* Cart thumbnail */}
+                <img className="cart-thumbnail" src={CartThumbnail}
+                alt="cart thumbnail"/>
 
-              <div className="quantity-info-container">
-                <p className="cart-product-title">Fall Limited Edition Sneakers</p>
-                <p className="cal-quantity">$125.00 x {quantity} <span><strong>0</strong></span></p>
+                <div className="quantity-info-container">
+                  <p className="cart-product-title">Fall Limited Edition Sneakers</p>
+                  <p className="cal-quantity">$125.00 x {quantity} <span>$0.00</span></p>
+                </div>
+
+                {/* Delete */}
+                <img className="delete" src={TrashCan} alt="delete"/>
               </div>
-              <img className="delete" src={TrashCan} alt="delete"/>
 
               <div className="checkout-container">
                 <button className="checkout">Checkout</button>

@@ -568,6 +568,50 @@ header {
   color: hsl(219deg, 9%, 45%);
 }
 
+.calc-quantity-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.cart-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cart-info-container .cart-thumbnail {
+  width: 15vw;
+  border-radius: 0.3rem;
+}
+
+.quantity-info-container p {
+  color: hsl(219deg, 9%, 45%);
+}
+.quantity-info-container p span {
+  color: hsl(220deg, 13%, 13%) !important;
+  font-weight: 700;
+}
+
+.checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0.5rem;
+  width: 95%;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 15px 8px hsl(25deg, 100%, 94%);
+  transition: 300ms;
+}
+
 * {
   margin: 0;
   padding: 0;
