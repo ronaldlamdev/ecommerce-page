@@ -81,3 +81,8 @@
   box-shadow: 2px 15px 8px cart.$pale-orange;
   transition: 300ms;
 }
+
+// class added and removed to #cart
+.open-close {
+  display: block;
+}

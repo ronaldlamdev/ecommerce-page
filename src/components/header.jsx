@@ -25,6 +25,13 @@ const MobileMenuCloser = () => {
   CloseMenuList.style.display = 'none'
 }
 
+// open and close cart
+
+const CartToggler = () => {
+  const Cart = document.getElementById('cart');
+  Cart.classList.toggle('open-close');
+}
+
 const Header = () => {
   return (
     <header>
@@ -49,7 +56,7 @@ const Header = () => {
       </div>
       <div className="header-section-2">
         {/* Cart */}
-        <img src={HeaderCart} alt="cart" className="header-cart"/>
+        <img src={HeaderCart} alt="cart" onClick={CartToggler} className="header-cart"/>
         {/* Avatar */}
         <img src={Avatar} alt="avatar" className="avatar"/>
       </div>
