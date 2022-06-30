@@ -28,7 +28,11 @@ const Main = () => {
     }
   }
 
-  const [quantity, setQuantity] = useState(0);
+  let [quantity, setQuantity] = useState(0);
+  let [cartQTY, setCartQTY] = useState(0);
+  let [cost, setCost] = useState(0);
+
+  
 
   return (
     <main>
@@ -87,7 +91,7 @@ const Main = () => {
           </div>
 
           {/* Add to cart */}
-          <button className="add-to-cart">
+          <button onClick={() => setCartQTY(cartQTY = quantity)} className="add-to-cart">
             <FontAwesomeIcon icon={faCartShopping} className='cart-icon'/>
             Add to cart
           </button>
@@ -103,7 +107,7 @@ const Main = () => {
         {/* Display empty cart container when qty is 0
             Otherwise, display qty added */}
         <div className="cart-quantity-container">
-          {quantity === 0 ? 
+          {cartQTY === 0 ? 
             <div className="cart-empty-container">
               <p>Your cart is empty</p>
             </div>
@@ -116,7 +120,7 @@ const Main = () => {
 
                 <div className="quantity-info-container">
                   <p className="cart-product-title">Fall Limited Edition Sneakers</p>
-                  <p className="cal-quantity">$125.00 x {quantity} <span>$0.00</span></p>
+                  <p className="cal-quantity">$125.00 x {quantity} <span>{cost}</span></p>
                 </div>
 
                 {/* Delete */}
