@@ -91,7 +91,7 @@ const Main = () => {
           </div>
 
           {/* Add to cart */}
-          <button onClick={() => setCartQTY(cartQTY = quantity)} className="add-to-cart">
+          <button onClick={() => {setCartQTY(cartQTY = quantity); setCost(125 * cartQTY)}} className="add-to-cart">
             <FontAwesomeIcon icon={faCartShopping} className='cart-icon'/>
             Add to cart
           </button>
@@ -120,7 +120,7 @@ const Main = () => {
 
                 <div className="quantity-info-container">
                   <p className="cart-product-title">Fall Limited Edition Sneakers</p>
-                  <p className="cal-quantity">$125.00 x {quantity} <span>{cost}</span></p>
+                  <p className="cal-quantity">$125.00 x {quantity} <span>${cost}.00</span></p>
                 </div>
 
                 {/* Delete */}
