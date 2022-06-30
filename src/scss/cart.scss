@@ -13,7 +13,7 @@
 .cart {
   position: absolute;
   top: 4.8rem;
-  width: 70vw;
+  width: 95vw;
   margin-inline: .5rem;
   background-color: cart.$white;
   border-radius: .5rem;
@@ -21,6 +21,14 @@
 }
 
 .cart-title {
-  margin-left: 1rem;
-  padding-block: 1rem 1.5rem;
+  padding: 1rem 0 1.5rem 1rem;
+  border-bottom: 1px solid cart.$grayish-blue;
+  font-size: .7rem;
+}
+
+.cart-empty-container {
+  padding: 4rem;
+  text-align: center;
+  font-weight: 700;
+  color: cart.$dark-grayish-blue;
 }

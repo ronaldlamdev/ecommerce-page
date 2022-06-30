@@ -100,18 +100,29 @@ const Main = () => {
           <h2>Cart</h2>
         </div>
 
+        {/* Display empty cart container when qty is 0
+            Otherwise, display qty added */}
         <div className="cart-quantity-container">
-          {quantity === 0 ? <p>Your cart is empty</p>
+          {quantity === 0 ? 
+            <div className="cart-empty-container">
+              <p>Your cart is empty</p>
+            </div>
           : <div className="calc-quantity-container">
+
+              {/* Cart thumbnail */}
               <img className="cart-thumbnail" src={CartThumbnail}
               alt="cart thumbnail"/>
+
               <div className="quantity-info-container">
                 <p className="cart-product-title">Fall Limited Edition Sneakers</p>
                 <p className="cal-quantity">$125.00 x {quantity} <span><strong>0</strong></span></p>
               </div>
               <img className="delete" src={TrashCan} alt="delete"/>
+
+              <div className="checkout-container">
+                <button className="checkout">Checkout</button>
+              </div>
             </div>}
-            <button className="checkout">Checkout</button>
         </div>
       </div>
     </main>
