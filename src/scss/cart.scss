@@ -11,6 +11,7 @@
 @use './variables.scss' as cart;
 
 .cart {
+  display: none;
   position: absolute;
   top: 4.8rem;
   width: 95vw;
@@ -65,19 +66,18 @@
 
 .checkout {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 1rem .5rem;
-    width: 95%;
-    background-color: cart.$orange;
-    color: cart.$white;
-    border: none;
-    border-radius: .8rem;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 2px 15px 8px cart.$pale-orange;
-    transition: 300ms;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem .5rem;
+  width: 95%;
+  background-color: cart.$orange;
+  color: cart.$white;
+  border: none;
+  border-radius: .8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 15px 8px cart.$pale-orange;
+  transition: 300ms;
 }

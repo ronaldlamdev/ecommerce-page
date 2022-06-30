@@ -136,8 +136,7 @@ header {
 }
 
 .text-container {
-  margin-inline: 1rem;
-  margin-top: 1.2rem;
+  margin: 1.2rem 1rem 0;
   width: 90%;
 }
 
@@ -213,8 +212,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   padding: 1rem 0.5rem;
   width: 95%;
   background-color: hsl(26deg, 100%, 55%);
@@ -546,6 +544,7 @@ header {
   }
 }
 .cart {
+  display: none;
   position: absolute;
   top: 4.8rem;
   width: 95vw;
@@ -597,8 +596,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   padding: 1rem 0.5rem;
   width: 95%;
   background-color: hsl(26deg, 100%, 55%);

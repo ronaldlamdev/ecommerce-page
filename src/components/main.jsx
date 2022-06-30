@@ -94,7 +94,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="cart">
+      <div id="cart" className="cart">
 
         <div className="cart-title">
           <h2>Cart</h2>
