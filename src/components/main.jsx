@@ -39,6 +39,14 @@ const Main = () => {
     }
   }
 
+  // Deletes entire cart by reducing cart to to 0
+  const Delete = () => {
+    if (cartQTY > 0) {
+      setQuantity(quantity = 0);
+      setCartQTY(cartQTY = quantity);
+    }
+  }
+
   return (
     <main>
       <div className="images-container">
@@ -130,7 +138,7 @@ const Main = () => {
                 </div>
 
                 {/* Delete */}
-                <img className="delete" src={TrashCan} alt="delete"/>
+                <img className="delete" onClick={Delete} src={TrashCan} alt="delete"/>
               </div>
 
               <div className="checkout-container">
