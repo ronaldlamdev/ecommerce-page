@@ -610,6 +610,10 @@ header {
   transition: 300ms;
 }
 
+.delete {
+  cursor: pointer;
+}
+
 .open-close {
   display: block;
 }

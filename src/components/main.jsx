@@ -32,7 +32,12 @@ const Main = () => {
   let [cartQTY, setCartQTY] = useState(0);
   let [cost, setCost] = useState(0);
 
-  
+  // checks if qty is negative
+  const checkQty = () => {
+    if (quantity > 0) {
+      setCartQTY(cartQTY = quantity);
+    }
+  }
 
   return (
     <main>
@@ -91,7 +96,7 @@ const Main = () => {
           </div>
 
           {/* Add to cart */}
-          <button onClick={() => {setCartQTY(cartQTY = quantity); setCost(125 * cartQTY)}} className="add-to-cart">
+          <button onClick={() => {checkQty(); setCost(125 * cartQTY)}} className="add-to-cart">
             <FontAwesomeIcon icon={faCartShopping} className='cart-icon'/>
             Add to cart
           </button>
@@ -104,6 +109,7 @@ const Main = () => {
           <h2>Cart</h2>
         </div>
 
+        {/* Cart */}
         {/* Display empty cart container when qty is 0
             Otherwise, display qty added */}
         <div className="cart-quantity-container">
@@ -120,7 +126,7 @@ const Main = () => {
 
                 <div className="quantity-info-container">
                   <p className="cart-product-title">Fall Limited Edition Sneakers</p>
-                  <p className="cal-quantity">$125.00 x {quantity} <span>${cost}.00</span></p>
+                  <p className="cal-quantity">$125.00 x {cartQTY} <span>${cost}.00</span></p>
                 </div>
 
                 {/* Delete */}

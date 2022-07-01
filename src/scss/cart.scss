@@ -82,6 +82,10 @@
   transition: 300ms;
 }
 
+.delete {
+  cursor: pointer;
+}
+
 // class added and removed to #cart
 .open-close {
   display: block;
