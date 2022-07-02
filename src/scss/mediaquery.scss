@@ -91,6 +91,17 @@
     border: 2px solid media.$orange;
     opacity: .7;
   }
+
+  .quantity-info-container {
+    
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .delete {
+    width: 1.5rem;
+  }
 }
 
 // screen size: 1200px (laptop screen size)

@@ -64,6 +64,11 @@
   }
 }
 
+.checkout-container {
+  display: flex;
+  justify-content: center;
+}
+
 .checkout {
   display: flex;
   justify-content: center;
@@ -80,6 +85,10 @@
   cursor: pointer;
   box-shadow: 2px 15px 8px cart.$pale-orange;
   transition: 300ms;
+}
+
+.checkout:hover {
+  opacity: .7;
 }
 
 .delete {

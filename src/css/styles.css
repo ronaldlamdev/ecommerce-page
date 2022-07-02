@@ -305,6 +305,14 @@ header {
     border: 2px solid hsl(26deg, 100%, 55%);
     opacity: 0.7;
   }
+
+  .quantity-info-container p {
+    font-size: 1.3rem;
+  }
+
+  .delete {
+    width: 1.5rem;
+  }
 }
 @media (min-width: 1200px) {
   header {
@@ -592,6 +600,11 @@ header {
   font-weight: 700;
 }
 
+.checkout-container {
+  display: flex;
+  justify-content: center;
+}
+
 .checkout {
   display: flex;
   justify-content: center;
@@ -608,6 +621,10 @@ header {
   cursor: pointer;
   box-shadow: 2px 15px 8px hsl(25deg, 100%, 94%);
   transition: 300ms;
+}
+
+.checkout:hover {
+  opacity: 0.7;
 }
 
 .delete {
