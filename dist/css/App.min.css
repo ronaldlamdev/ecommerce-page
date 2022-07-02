@@ -1,0 +1,2 @@
+@use './variables.scss';@use './header.scss';@use './main.scss';@use './mediaquery.scss';@use './modal.scss';@use './cart.scss';*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;font-family:'Kumbh Sans', sans-serif}li{list-style:none}a{text-decoration:none}.App{width:100vw;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;overflow-x:hidden;overflow-y:hidden}
+/*# sourceMappingURL=App.min.css.map */

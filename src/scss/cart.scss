@@ -99,3 +99,40 @@
 .open-close {
   display: block;
 }
+
+// Media queries for >= 1200px moved here
+// Won't work in original mediaquery.scss
+
+@media (min-width: 1200px) {
+
+  .cart {
+    width: 35vw;
+    top: 4.2rem;
+    right: 4rem;
+  }
+
+  .cart-info-container {
+
+    .cart-thumbnail {
+      width: 7vw;
+    }
+  }
+
+  .quantity-info-container {
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .delete {
+    width: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .cart {
+    width: 25vw;
+  }
+}
