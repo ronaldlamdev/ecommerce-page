@@ -4,6 +4,7 @@ import Logo from '../images/logo.svg';
 import MobileMenu from '../images/icon-menu.svg';
 import HeaderCart from '../images/icon-cart.svg';
 import Avatar from '../images/image-avatar.png';
+import cartQTY from '../components/main';
 
 // Create List with Link in Header Menu
 const HeaderMenuList = (props) => {
@@ -57,6 +58,7 @@ const Header = () => {
       <div className="header-section-2">
         {/* Cart */}
         <img src={HeaderCart} alt="cart" onClick={CartToggler} className="header-cart"/>
+        
         {/* Avatar */}
         <img src={Avatar} alt="avatar" className="avatar"/>
       </div>

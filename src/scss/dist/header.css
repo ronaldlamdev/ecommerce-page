@@ -1,0 +1,85 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 5%;
+  padding: 0.75rem;
+}
+
+.header-section-1 {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  padding-left: 0.8rem;
+}
+
+.header-section-2 {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.nav-links-container {
+  background-color: white;
+  width: 50%;
+  height: 150vh;
+}
+
+.close-icon {
+  padding: 1rem;
+}
+
+.menu-list {
+  padding: 1rem;
+}
+.menu-list li {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+.menu-list li::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  background-color: #ff7d1a;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.menu-list li:hover::before {
+  opacity: 1;
+}
+
+.menu-link {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.header-cart {
+  padding-right: 0.75rem;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 2rem;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.avatar:hover {
+  border: 0.15rem solid #ff7d1a;
+  border-radius: 50%;
+}

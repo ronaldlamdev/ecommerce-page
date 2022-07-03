@@ -47,15 +47,31 @@ const Main = () => {
     }
   }
 
+  // Show Product Img 2
+  const DisplayProductImg2 = () => {
+    const ProductImg1 = document.getElementById('product-img-1');
+    const ProductImg2 = document.getElementById('product-img-2');
+    const ProductImg3 = document.getElementById('product-img-3');
+    const ProductImg4 = document.getElementById('product-img-4');
+    if (ProductImg2.classList.contains('hidden')) {
+      ProductImg1.classList.remove('show');
+      ProductImg3.classList.remove('show');
+      ProductImg4.classList.remove('show');
+      ProductImg2.classList.remove('hidden');
+      ProductImg2.classList.add('show');
+    } 
+  }
+
   return (
     <main>
+
       <div className="images-container">
         {/* Full size images */}
         <div className="product-images-container">
-          <img onClick={DisplayModal} className="product-img" src={ProductImg1} alt="product pic"></img>
-          <img onClick={DisplayModal} className="product-img" src={ProductImg2} alt="product pic" hidden></img>
-          <img onClick={DisplayModal} className="product-img" src={ProductImg3} alt="product pic" hidden></img>
-          <img onClick={DisplayModal} className="product-img" src={ProductImg4} alt="product pic" hidden></img>
+          <img onClick={DisplayModal} id="product-img-1" className="product-img show" src={ProductImg1} alt="product pic"></img>
+          <img onClick={DisplayModal} id="product-img-2" className="product-img hidden" src={ProductImg2} alt="product pic"></img>
+          <img onClick={DisplayModal} id="product-img-3" className="product-img hidden" src={ProductImg3} alt="product pic"></img>
+          <img onClick={DisplayModal} id="product-img-4" className="product-img hidden" src={ProductImg4} alt="product pic"></img>
           {/* Carousel Arrows from Font Awesome */}
           <div className="carousel-container">
             <div className="left-chevron chevron-container">
@@ -70,7 +86,7 @@ const Main = () => {
         {/* Thumbnails */}
         <div className="thumbnail-images-container">
           <img className="thumbnail active" src={Thumbnail1} alt="thumbnail"></img>
-          <img className="thumbnail" src={Thumbnail2} alt="thumbnail"></img>
+          <img onClick={DisplayProductImg2} className="thumbnail" src={Thumbnail2} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail3} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail4} alt="thumbnail"></img>
         </div>
@@ -111,13 +127,13 @@ const Main = () => {
         </div>
       </div>
 
+      {/* Cart */}
       <div id="cart" className="cart">
 
         <div className="cart-title">
           <h2>Cart</h2>
         </div>
 
-        {/* Cart */}
         {/* Display empty cart container when qty is 0
             Otherwise, display qty added */}
         <div className="cart-quantity-container">
