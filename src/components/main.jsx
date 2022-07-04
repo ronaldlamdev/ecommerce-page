@@ -47,19 +47,38 @@ const Main = () => {
     }
   }
 
-  // Show Product Img 2
-  const DisplayProductImg2 = () => {
-    const ProductImg1 = document.getElementById('product-img-1');
-    const ProductImg2 = document.getElementById('product-img-2');
-    const ProductImg3 = document.getElementById('product-img-3');
-    const ProductImg4 = document.getElementById('product-img-4');
-    if (ProductImg2.classList.contains('hidden')) {
-      ProductImg1.classList.remove('show');
-      ProductImg3.classList.remove('show');
-      ProductImg4.classList.remove('show');
-      ProductImg2.classList.remove('hidden');
-      ProductImg2.classList.add('show');
-    } 
+  // Image Carousel
+  const mainProductImages = Array.from(document.querySelectorAll('.product-img'));
+  const carouselBtns = document.querySelectorAll('.chevron');
+  const thumbnailImages = Array.from(document.querySelectorAll('.thumbnail'));
+
+  // Carousel for Buttons
+  carouselBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      let imageUpdate = btn.classList.contains('next') ? 1 : -1;
+      const mainImageContainer = document.querySelector('.product-images-container');
+
+      
+    })
+  })
+
+  // Product container functions 
+
+  let productContainers = (productContainer, imageUpdate, productImages) => {
+    const activeImage = productContainer.querySelector('[data-current-image]');
+
+    let newIndex = productImages.indexOf(activeImage) + imageUpdate;
+
+    if (newIndex < 0) {
+      newIndex = productImages.length - 1;
+    }
+
+    if (newIndex >= productImages.length) {
+      newIndex = 0;
+    }
+
+    productImages[newIndex].dataset.currentImage = true;
+    delete activeImage.dataset.currentImage;
   }
 
   return (
@@ -68,10 +87,10 @@ const Main = () => {
       <div className="images-container">
         {/* Full size images */}
         <div className="product-images-container">
-          <img onClick={DisplayModal} id="product-img-1" className="product-img show" src={ProductImg1} alt="product pic"></img>
-          <img onClick={DisplayModal} id="product-img-2" className="product-img hidden" src={ProductImg2} alt="product pic"></img>
-          <img onClick={DisplayModal} id="product-img-3" className="product-img hidden" src={ProductImg3} alt="product pic"></img>
-          <img onClick={DisplayModal} id="product-img-4" className="product-img hidden" src={ProductImg4} alt="product pic"></img>
+          <img onClick={DisplayModal} className="product-img show" src={ProductImg1} alt="product pic" data-current-image="true"></img>
+          <img onClick={DisplayModal} className="product-img hidden" src={ProductImg2} alt="product pic"></img>
+          <img onClick={DisplayModal} className="product-img hidden" src={ProductImg3} alt="product pic"></img>
+          <img onClick={DisplayModal} className="product-img hidden" src={ProductImg4} alt="product pic"></img>
           {/* Carousel Arrows from Font Awesome */}
           <div className="carousel-container">
             <div className="left-chevron chevron-container">
@@ -86,7 +105,7 @@ const Main = () => {
         {/* Thumbnails */}
         <div className="thumbnail-images-container">
           <img className="thumbnail active" src={Thumbnail1} alt="thumbnail"></img>
-          <img onClick={DisplayProductImg2} className="thumbnail" src={Thumbnail2} alt="thumbnail"></img>
+          <img className="thumbnail" src={Thumbnail2} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail3} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail4} alt="thumbnail"></img>
         </div>
