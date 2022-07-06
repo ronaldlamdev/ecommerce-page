@@ -10,57 +10,91 @@
 
 @use './variables.scss' as main;
 
-.images-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+// .images-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
 
-.product-images-container {
-  width: 100%;
-  position: relative;
-  margin-top: 1rem;
+// .product-images-container {
+//   width: 100%;
+//   position: relative;
+//   margin-top: 1rem;
 
-  .product-img {
-    width: 100%;
-    cursor: pointer;
-  }
-}
+//   .product-img {
+//     width: 100%;
+//     cursor: pointer;
+//   }
+// }
 
-.carousel-container {
-  position: absolute;
-  top: 50%;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+// .carousel-container {
+//   position: absolute;
+//   top: 50%;
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+// }
 
-.chevron-container {
-  background-color: main.$white;
-  width: 2rem;
-  text-align: center;
-  border-radius: 50%;
-  padding: .3rem .3rem ;
-}
+// .chevron-container {
+//   background-color: main.$white;
+//   width: 2rem;
+//   text-align: center;
+//   border-radius: 50%;
+//   padding: .3rem .3rem ;
+// }
 
-.chevron:hover {
-  color: main.$orange;
-}
+// .chevron:hover {
+//   color: main.$orange;
+// }
 
-.left-chevron {
-  margin-left: 1rem;
+// .left-chevron {
+//   margin-left: 1rem;
+//   cursor: pointer;
+// }
+
+// .right-chevron {
+//   margin-right: 1rem;
+//   cursor: pointer;
+// }
+
+// .thumbnail-images-container {
+//   display: none;
+// }
+
+// Images Container
+
+.thumbnail {
+  border: 1px solid main.$orange;
+  outline: none;
+  appearance: none;
+  width: 20%;
+  height: 60px;
   cursor: pointer;
 }
 
-.right-chevron {
-  margin-right: 1rem;
-  cursor: pointer;
+// set thumbnail images with background property
+#thumbnail-img-1 {
+  background-image: url(../images/image-product-1-thumbnail.jpg);
+  background-size: cover;
 }
 
-.thumbnail-images-container {
-  display: none;
+#thumbnail-img-2 {
+  background-image: url(../images/image-product-2-thumbnail.jpg);
+  background-size: cover;
 }
+
+#thumbnail-img-3 {
+  background-image: url(../images/image-product-3-thumbnail.jpg);
+  background-size: cover;
+}
+
+#thumbnail-img-4 {
+  background-image: url(../images/image-product-4-thumbnail.jpg);
+  background-size: cover;
+}
+
+
 
 .text-container {
   margin: 1.2rem 1rem 0;

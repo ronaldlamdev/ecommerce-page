@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight, faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import ProductImg1 from '../images/image-product-1.jpg';
-import ProductImg2 from '../images/image-product-2.jpg';
-import ProductImg3 from '../images/image-product-3.jpg';
-import ProductImg4 from '../images/image-product-4.jpg';
+// import { faChevronLeft, faChevronRight, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+// import ProductImg1 from '../images/image-product-1.jpg';
+// import ProductImg2 from '../images/image-product-2.jpg';
+// import ProductImg3 from '../images/image-product-3.jpg';
+// import ProductImg4 from '../images/image-product-4.jpg';
 import Thumbnail1 from '../images/image-product-1-thumbnail.jpg';
 import Thumbnail2 from '../images/image-product-2-thumbnail.jpg';
 import Thumbnail3 from '../images/image-product-3-thumbnail.jpg';
@@ -16,17 +16,17 @@ import CartThumbnail from '../images/image-product-1-thumbnail.jpg';
 
 const Main = () => {
 
-  const DisplayModal = () => {
-    const modal = document.getElementById('modal');
+  // const DisplayModal = () => {
+  //   const modal = document.getElementById('modal');
 
-    if (window.innerWidth >= 1200) {
-      if (modal.style.display === "none") {
-        modal.style.display = "block";
-      } else {
-        modal.style.display = 'none';
-      }
-    }
-  }
+  //   if (window.innerWidth >= 1200) {
+  //     if (modal.style.display === "none") {
+  //       modal.style.display = "block";
+  //     } else {
+  //       modal.style.display = 'none';
+  //     }
+  //   }
+  // }
 
   let [quantity, setQuantity] = useState(0);
   let [cartQTY, setCartQTY] = useState(0);
@@ -47,52 +47,18 @@ const Main = () => {
     }
   }
 
-  // Image Carousel
-  const mainProductImages = Array.from(document.querySelectorAll('.product-img'));
-  const carouselBtns = document.querySelectorAll('.chevron');
-  const thumbnailImages = Array.from(document.querySelectorAll('.thumbnail'));
-
-  // Carousel for Buttons
-  carouselBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      let imageUpdate = btn.classList.contains('next') ? 1 : -1;
-      const mainImageContainer = document.querySelector('.product-images-container');
-
-      
-    })
-  })
-
-  // Product container functions 
-
-  let productContainers = (productContainer, imageUpdate, productImages) => {
-    const activeImage = productContainer.querySelector('[data-current-image]');
-
-    let newIndex = productImages.indexOf(activeImage) + imageUpdate;
-
-    if (newIndex < 0) {
-      newIndex = productImages.length - 1;
-    }
-
-    if (newIndex >= productImages.length) {
-      newIndex = 0;
-    }
-
-    productImages[newIndex].dataset.currentImage = true;
-    delete activeImage.dataset.currentImage;
-  }
-
   return (
     <main>
 
-      <div className="images-container">
+      {/* <div className="images-container"> */}
         {/* Full size images */}
-        <div className="product-images-container">
+        {/* <div className="product-images-container">
           <img onClick={DisplayModal} className="product-img show" src={ProductImg1} alt="product pic" data-current-image="true"></img>
           <img onClick={DisplayModal} className="product-img hidden" src={ProductImg2} alt="product pic"></img>
           <img onClick={DisplayModal} className="product-img hidden" src={ProductImg3} alt="product pic"></img>
-          <img onClick={DisplayModal} className="product-img hidden" src={ProductImg4} alt="product pic"></img>
+          <img onClick={DisplayModal} className="product-img hidden" src={ProductImg4} alt="product pic"></img> */}
           {/* Carousel Arrows from Font Awesome */}
-          <div className="carousel-container">
+          {/* <div className="carousel-container">
             <div className="left-chevron chevron-container">
               <FontAwesomeIcon className="chevron previous" icon={faChevronLeft } />
             </div>
@@ -100,15 +66,28 @@ const Main = () => {
               <FontAwesomeIcon className="chevron next" icon={faChevronRight } />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Thumbnails */}
-        <div className="thumbnail-images-container">
+        {/* <div className="thumbnail-images-container">
           <img className="thumbnail active" src={Thumbnail1} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail2} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail3} alt="thumbnail"></img>
           <img className="thumbnail" src={Thumbnail4} alt="thumbnail"></img>
         </div>
+      </div> */}
+
+      <div className="images-container">
+
+        {/* Large image */}
+        <div className="product-full-image-container"></div>
+        <div className="thumbnail-container">
+          <input type='radio' id="thumbnail-img-1" className="thumbnail" defaultChecked={true}></input>
+          <input type='radio' id="thumbnail-img-2" className="thumbnail"></input>
+          <input type='radio' id="thumbnail-img-3" className="thumbnail"></input>
+          <input type='radio' id="thumbnail-img-4" className="thumbnail"></input>
+        </div>
+
       </div>
 
       <div className="text-container">
@@ -140,7 +119,7 @@ const Main = () => {
 
           {/* Add to cart */}
           <button onClick={() => {checkQty(); setCost(125 * cartQTY)}} className="add-to-cart">
-            <FontAwesomeIcon icon={faCartShopping} className='cart-icon'/>
+            {/* <FontAwesomeIcon icon={faCartShopping} className='cart-icon'/> */}
             Add to cart
           </button>
         </div>
