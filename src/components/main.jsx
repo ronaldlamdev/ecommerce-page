@@ -69,7 +69,8 @@ const Main = () => {
     } slider.src = ProductImages[num];
   }
 
-  
+  // Thumbnail functions to display different full product images
+
 
   return (
     <main>
@@ -77,7 +78,7 @@ const Main = () => {
       <div className="images-container">
         {/* Full size images */}
         <div className="product-images-container">
-          <img id="slider" onClick={DisplayModal} className="product-img show" src={ProductImg1} alt="product pic"></img>
+          <img id="slider" onClick={DisplayModal} className="product-img" src={ProductImg1} alt="product pic"></img>
           <div className="carousel-container">
             <div className="left-chevron chevron-container">
               <FontAwesomeIcon onClick={prevImage} className="chevron previous" icon={faChevronLeft } />

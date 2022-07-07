@@ -47,6 +47,9 @@ const Modal = () => {
     } modalSlider.src = modalProductImages[numModal];
   }
 
+  // Thumbnail functions to display different modal product images
+  
+
   return (
     <section id="modal" className="modal">
       <div className="modal-container">

@@ -150,11 +150,3 @@
 .buy-quantity-container .add-to-cart:hover {
   opacity: 0.7;
 }
-
-.show {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
