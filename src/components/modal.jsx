@@ -56,16 +56,13 @@ const Modal = () => {
           {/* Modal Close Icon */}
           <FontAwesomeIcon onClick={closeModal} className="modal-close" icon={faClose} />
           <img id="modal-slider" className="modal-img" src={ModalFullImg1} alt="modal pic" />
-          {/* <img className="modal-img" src={ModalFullImg2} alt="modal pic" hidden/>
-          <img className="modal-img" src={ModalFullImg3} alt="modal pic" hidden/>
-          <img className="modal-img" src={ModalFullImg4} alt="modal pic" hidden/> */}
 
           {/* Previous and Next functions */}
           <div className="modal-carousel-container">
-            <div onClick={prevModalImage} className="modal-left-chevron modal-chevron-container">
+            <div className="modal-left-chevron modal-chevron-container">
               <FontAwesomeIcon onClick={prevModalImage} className="modal-chevron modal-previous" icon={faChevronLeft}/>
             </div>
-            <div onClick={nextModalImage} className="modal-right-chevron modal-chevron-container">
+            <div className="modal-right-chevron modal-chevron-container">
               <FontAwesomeIcon onClick={nextModalImage} className="modal-chevron modal-next" icon={faChevronRight}/>
             </div>
           </div>

@@ -69,6 +69,8 @@ const Main = () => {
     } slider.src = ProductImages[num];
   }
 
+  
+
   return (
     <main>
 
@@ -77,10 +79,10 @@ const Main = () => {
         <div className="product-images-container">
           <img id="slider" onClick={DisplayModal} className="product-img show" src={ProductImg1} alt="product pic"></img>
           <div className="carousel-container">
-            <div onClick={prevImage} className="left-chevron chevron-container">
+            <div className="left-chevron chevron-container">
               <FontAwesomeIcon onClick={prevImage} className="chevron previous" icon={faChevronLeft } />
             </div>
-            <div onClick={nextImage} className="right-chevron chevron-container">
+            <div className="right-chevron chevron-container">
               <FontAwesomeIcon onClick={nextImage} className="chevron next" icon={faChevronRight } />
             </div>
           </div>
