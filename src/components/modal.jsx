@@ -49,6 +49,25 @@ const Modal = () => {
 
   // Thumbnail functions to display different modal product images
   
+  const modalThumbnailViewer1 = () => {
+    let modalFullImage = document.getElementById('modal-slider');
+    modalFullImage.src = ModalFullImg1;
+  }
+
+  const modalThumbnailViewer2 = () => {
+    let modalFullImage = document.getElementById('modal-slider');
+    modalFullImage.src = ModalFullImg2;
+  }
+
+  const modalThumbnailViewer3 = () => {
+    let modalFullImage = document.getElementById('modal-slider');
+    modalFullImage.src = ModalFullImg3;
+  }
+
+  const modalThumbnailViewer4 = () => {
+    let modalFullImage = document.getElementById('modal-slider');
+    modalFullImage.src = ModalFullImg4;
+  }
 
   return (
     <section id="modal" className="modal">
@@ -73,10 +92,10 @@ const Modal = () => {
 
         {/* Thumbnail images */}
         <div className="modal-thumbnail-images-container">
-          <img className="modal-thumbnail active" src={ModalThumbnail1} alt="thumbnail"/>
-          <img className="modal-thumbnail" src={ModalThumbnail2} alt="thumbnail"/>
-          <img className="modal-thumbnail" src={ModalThumbnail3} alt="thumbnail"/>
-          <img className="modal-thumbnail" src={ModalThumbnail4} alt="thumbnail"/>
+          <img className="modal-thumbnail active" onClick={modalThumbnailViewer1} src={ModalThumbnail1} alt="thumbnail"/>
+          <img className="modal-thumbnail" onClick={modalThumbnailViewer2} src={ModalThumbnail2} alt="thumbnail"/>
+          <img className="modal-thumbnail" onClick={modalThumbnailViewer3} src={ModalThumbnail3} alt="thumbnail"/>
+          <img className="modal-thumbnail" onClick={modalThumbnailViewer4} src={ModalThumbnail4} alt="thumbnail"/>
         </div>
       </div>
     </section>
