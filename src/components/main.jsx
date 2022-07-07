@@ -47,23 +47,41 @@ const Main = () => {
     }
   }
 
+  // Carousel change full size images when clicked
+
+  let num = 0;
+
+  const prevImage = () => {
+    num--;
+    let ProductImages = [ProductImg1, ProductImg2, ProductImg3, ProductImg4];
+    let slider = document.getElementById('slider');
+    if (num < 0 ) {
+      num = ProductImages.length - 1;
+    } slider.src = ProductImages[num];
+  }
+
+  const nextImage = () => {
+    num++;
+    let ProductImages = [ProductImg1, ProductImg2, ProductImg3, ProductImg4];
+    let slider = document.getElementById('slider');
+    if (num >= ProductImages.length) {
+      num = 0;
+    } slider.src = ProductImages[num];
+  }
+
   return (
     <main>
 
       <div className="images-container">
         {/* Full size images */}
         <div className="product-images-container">
-          <img onClick={DisplayModal} className="product-img show" src={ProductImg1} alt="product pic" data-current-image="true"></img>
-          <img onClick={DisplayModal} className="product-img hidden" src={ProductImg2} alt="product pic"></img>
-          <img onClick={DisplayModal} className="product-img hidden" src={ProductImg3} alt="product pic"></img>
-          <img onClick={DisplayModal} className="product-img hidden" src={ProductImg4} alt="product pic"></img>
-          {/* Carousel Arrows from Font Awesome */}
+          <img id="slider" onClick={DisplayModal} className="product-img show" src={ProductImg1} alt="product pic"></img>
           <div className="carousel-container">
-            <div className="left-chevron chevron-container">
-              <FontAwesomeIcon className="chevron previous" icon={faChevronLeft } />
+            <div onClick={prevImage} className="left-chevron chevron-container">
+              <FontAwesomeIcon onClick={prevImage} className="chevron previous" icon={faChevronLeft } />
             </div>
-            <div className="right-chevron chevron-container">
-              <FontAwesomeIcon className="chevron next" icon={faChevronRight } />
+            <div onClick={nextImage} className="right-chevron chevron-container">
+              <FontAwesomeIcon onClick={nextImage} className="chevron next" icon={faChevronRight } />
             </div>
           </div>
         </div>
