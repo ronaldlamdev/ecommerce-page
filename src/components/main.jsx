@@ -71,6 +71,25 @@ const Main = () => {
 
   // Thumbnail functions to display different full product images
 
+  const thumbnailViewer1 = () => {
+    let fullImage = document.getElementById('slider');
+    fullImage.src = ProductImg1;
+  }
+
+  const thumbnailViewer2 = () => {
+    let fullImage = document.getElementById('slider');
+    fullImage.src = ProductImg2;
+  }
+
+  const thumbnailViewer3 = () => {
+    let fullImage = document.getElementById('slider');
+    fullImage.src = ProductImg3;
+  }
+
+  const thumbnailViewer4 = () => {
+    let fullImage = document.getElementById('slider');
+    fullImage.src = ProductImg4;
+  }
 
   return (
     <main>
@@ -78,7 +97,7 @@ const Main = () => {
       <div className="images-container">
         {/* Full size images */}
         <div className="product-images-container">
-          <img id="slider" onClick={DisplayModal} className="product-img" src={ProductImg1} alt="product pic"></img>
+          <img id="slider" onClick={DisplayModal} className="product-img show" src={ProductImg1} alt="product pic"></img>
           <div className="carousel-container">
             <div className="left-chevron chevron-container">
               <FontAwesomeIcon onClick={prevImage} className="chevron previous" icon={faChevronLeft } />
@@ -91,10 +110,10 @@ const Main = () => {
 
         {/* Thumbnails */}
         <div className="thumbnail-images-container">
-          <img className="thumbnail active" src={Thumbnail1} alt="thumbnail"></img>
-          <img className="thumbnail" src={Thumbnail2} alt="thumbnail"></img>
-          <img className="thumbnail" src={Thumbnail3} alt="thumbnail"></img>
-          <img className="thumbnail" src={Thumbnail4} alt="thumbnail"></img>
+          <img className="thumbnail active" onClick={thumbnailViewer1} src={Thumbnail1} alt="thumbnail"></img>
+          <img className="thumbnail" onClick={thumbnailViewer2} src={Thumbnail2} alt="thumbnail"></img>
+          <img className="thumbnail" onClick={thumbnailViewer3} src={Thumbnail3} alt="thumbnail"></img>
+          <img className="thumbnail" onClick={thumbnailViewer4} src={Thumbnail4} alt="thumbnail"></img>
         </div>
       </div>
 
