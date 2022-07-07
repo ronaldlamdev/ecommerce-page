@@ -64,7 +64,7 @@
 
   .thumbnail:hover {
     opacity: 0.7;
-    border: 2px solid #ff7d1a;
+    outline: 2px solid #ff7d1a;
   }
 
   .active {

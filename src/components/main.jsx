@@ -49,6 +49,7 @@ const Main = () => {
 
   // Carousel change full size images when clicked
 
+
   let num = 0;
 
   const prevImage = () => {
@@ -67,6 +68,7 @@ const Main = () => {
     if (num >= ProductImages.length) {
       num = 0;
     } slider.src = ProductImages[num];
+
   }
 
   // Thumbnail functions to display different full product images
@@ -110,7 +112,7 @@ const Main = () => {
 
         {/* Thumbnails */}
         <div className="thumbnail-images-container">
-          <img className="thumbnail active" onClick={thumbnailViewer1} src={Thumbnail1} alt="thumbnail"></img>
+          <img id="thumbnail1" className="thumbnail" onClick={thumbnailViewer1} src={Thumbnail1} alt="thumbnail"></img>
           <img className="thumbnail" onClick={thumbnailViewer2} src={Thumbnail2} alt="thumbnail"></img>
           <img className="thumbnail" onClick={thumbnailViewer3} src={Thumbnail3} alt="thumbnail"></img>
           <img className="thumbnail" onClick={thumbnailViewer4} src={Thumbnail4} alt="thumbnail"></img>

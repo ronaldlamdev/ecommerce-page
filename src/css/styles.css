@@ -303,7 +303,7 @@ header {
 
   .thumbnail:hover {
     opacity: 0.7;
-    border: 2px solid hsl(26deg, 100%, 55%);
+    outline: 2px solid hsl(26deg, 100%, 55%);
   }
 
   .active {
